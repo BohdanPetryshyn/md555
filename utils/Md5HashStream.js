@@ -2,7 +2,7 @@ const { Transform } = require('stream');
 
 const { rolInt32 } = require('bitwise-rotation');
 
-const toChunks = require('./utils/toChunks');
+const toChunks = require('./toChunks');
 
 const EMPTY_BUFFER = Buffer.alloc(0);
 const CHUNK_SIZE = 64;
@@ -10,8 +10,8 @@ const WORD_SIZE = 4;
 const MESSAGE_LENGTH_SIZE = 8;
 const PADDING_BUFFER_MIN_SIZE = MESSAGE_LENGTH_SIZE + 1;
 
-const SINUSES = require('./utils/sinuses');
-const ROTATES = require('./utils/rotates');
+const SINUSES = require('./sinuses');
+const ROTATES = require('./rotates');
 
 const addInt32 = (num1, num2) => {
     return (num1 + num2) | 0;
