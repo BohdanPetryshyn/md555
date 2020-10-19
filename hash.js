@@ -5,7 +5,7 @@ const Md5HashStream = require('./utils/Md5HashStream');
 
 const executeHashCommand = argv => {
     const inputFileName = argv['i'];
-    const input = argv._[1];
+    const input = String(argv._[1]);
     const outputFileName = argv['o'];
 
     const inputStream = inputFileName ? fs.createReadStream(inputFileName) : toStream(input);

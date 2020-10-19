@@ -6,7 +6,7 @@ const hashesEqual = (hash1, hash2) => hash1.toLowerCase() === hash2.toLowerCase(
 
 const executeCheckCommand = argv => {
     const inputFileName = argv._[1];
-    const expectedHash = argv['e'];
+    const expectedHash = String(argv['e']);
 
     fs.createReadStream(inputFileName)
         .pipe(new Md5HashStream())
