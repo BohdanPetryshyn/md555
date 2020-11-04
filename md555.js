@@ -2,8 +2,8 @@
 
 const parseArgs = require('minimist');
 
-const executeHashCommand = require('./hash');
-const executeCheckCommand = require('./check');
+const executeHashCommand = require('./src/hash');
+const executeCheckCommand = require('./src/check');
 
 const argv = parseArgs(process.argv.slice(2));
 

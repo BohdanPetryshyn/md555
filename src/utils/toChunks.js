@@ -1,6 +1,6 @@
 const toChunks = (buffer, size) => {
     if (size <= 0) {
-        return [buffer];
+        throw new Error('Size can not be less or equal to 0');
     }
 
     const result = [];
