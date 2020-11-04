@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const toStream = require('./utils/stringStream');
+const toStream = require('./utils/toStringStream');
 const Md5HashStream = require('./utils/Md5HashStream');
 
 const executeHashCommand = argv => {
